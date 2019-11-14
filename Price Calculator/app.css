@@ -1,0 +1,276 @@
+/*
+    Pricing
+*/
+
+#pricing {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 2100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#price-calculator {
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    width: 75%;
+    max-width: 600px;
+    min-width: 400px;
+    border: double;
+    align-items: center;
+    color: black;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.marketing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+#select-pages {
+    height: 45%;
+    width: 75%;
+    font-size:1.2rem;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+    height: 400px;
+    width: 100%;
+    margin: 15px;
+    font-size: 1.1rem;
+}
+
+.category label input {
+    position: relative;
+    right: 25px;
+}
+
+input[type=radio] {
+    padding: 0.5em;
+    -webkit-appearance: none;
+    outline: 0.1em solid black;
+    outline-offset: 0.1em;
+}
+
+input[type=radio]:checked {
+    display: inline-block;
+    background-color: #000;
+}
+
+.calculator-row2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    width: 100%;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: solid 2px;
+    border-color: lightgray;
+    border-radius:100px;
+    width: 85%;
+    height: 45px;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.toggle-label {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-left: 50px;
+    background: white;
+    border-radius: 100px;
+}
+
+.toggle-label::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height:32px;
+    width: 32px;
+    left: 10px;
+    top: 5px;
+    border: 2px solid black;
+    border-radius: 100px;
+    transition: background-color .2s;
+}
+
+.toggle-label-checked::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    left: 10px;
+    border: 3px solid black;
+    border-radius: 100px;
+    transition: background-color .2s;
+    background-color: black;
+}
+
+.hide-checkbox {
+    position: absolute;
+    left: -9999px;
+}
+
+#price-result{
+    display:flex;
+    align-items:center;
+    font-size:1.6rem;
+    height:100px
+}
+
+.total {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#tag{
+    display: none;
+}
+
+@media screen and (min-width: 1000px) {
+    #bottom {
+        display: none;
+    }
+
+    .total {
+        position: absolute;
+        top: 35%;
+        left: 35%;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    #tag {
+        width: 253px;
+        display: flex;
+        top: 25%;
+        position: sticky;
+        left: 86%;
+    }
+
+    .tag-triangle {
+        border-color: transparent black transparent transparent;
+        border-style: solid;
+        border-width: 39px;
+        width: 0;
+        height: 0;
+        float: left;
+    }
+
+    .tag-rectangle {
+        background-color: black;
+        width: 175px;
+        height: 77px;
+        display: inline;
+        float: right;
+        color:white
+    }
+
+    .hole {
+        width: 15px;
+        height: 15px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        background-color: white;
+        position: absolute;
+        left: 55px;
+        top: 30px;
+    }
+
+    .tag-rectangle h1 {
+        text-align: center;
+        font-size: 80px;
+        color: #FFF8C6;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #tag {
+        left: 75%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #tag {
+        left: 70%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #tag {
+        left: 86%;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+
+    #price-calculator {
+        display: flex;
+        flex-direction: column;
+        color: black;
+        background-color: rgba(0, 0, 0, .1);
+        height: 65%;
+        width: 75%;
+        max-width: 1500px;
+        border: double;
+        align-items: center;
+    }
+
+    .marketing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+    }
+
+    .category {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 1.4rem;
+        flex-wrap: wrap;
+        height: 150px;
+        width: 1250px;
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: 0;
+        background: white;
+        padding-left: 50px;
+        padding-top: 15px;
+    }
+
+    #top {
+        left: 90%;
+    }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1700px) {
+    .category {
+        width: 95%;
+    }
+}
